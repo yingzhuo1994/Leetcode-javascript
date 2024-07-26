@@ -5,7 +5,7 @@
  * @return {number}
  */
 var findValueOfPartition = function(nums) {
-    nums.sort();
+    nums.sort((a, b) => a - b);
     var ans = Number.MAX_SAFE_INTEGER;
     for (let i=0; i < nums.length - 1; i++) {
         ans = Math.min(ans, nums[i+1] - nums[i]);
